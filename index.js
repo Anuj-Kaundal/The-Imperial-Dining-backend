@@ -7,11 +7,10 @@ const nodemailer = require('nodemailer');
 const userdata = require('./model/user');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors({
-    origin: process.env.FRONTEND_URL,
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"]
-}));
+app.use(cors({ origin: process.env.FRONTEND_URL }));
+
+
+console.log(process.env.FRONTEND_URL);
 const PORT = process.env.PORT
 
 // book table
