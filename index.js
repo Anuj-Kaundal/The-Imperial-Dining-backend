@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const cors = require('cors');
 const dotenv = require("dotenv");
 dotenv.config();
 const nodemailer = require('nodemailer');
@@ -14,7 +13,9 @@ app.use(cors({
   credentials: true
 }));
 
-// console.log(process.env.FRONTEND_URL);
+app.options("*", cors());
+
+console.log(process.env.FRONTEND_URL);
 const PORT = process.env.PORT
 
 // book table
