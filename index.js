@@ -4,14 +4,15 @@ const dotenv = require("dotenv");
 dotenv.config();
 const nodemailer = require('nodemailer');
 const userdata = require('./model/user');
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
 const cors = require("cors");
 
 app.use(cors({
-  origin: "https://the-imperial-dining-frontend.onrender.com",
-  credentials: true
+    origin: "https://the-imperial-dining-frontend.onrender.com",
+    credentials: true
 }));
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 
 console.log(process.env.FRONTEND_URL);
@@ -186,7 +187,9 @@ app.post('/send', async (req, res) => {
         });
     }
 });
-
+app.get('/', (req, res) => {
+    res.send('Backend working ✅');
+});
 
 app.listen(PORT, () => {
     console.log('backend is running sucessfully');
