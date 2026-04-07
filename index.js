@@ -12,7 +12,6 @@ app.use(cors({
   origin: "https://the-imperial-dining-frontend.onrender.com",
   credentials: true
 }));
-app.options("*", cors());
 
 
 console.log(process.env.FRONTEND_URL);
