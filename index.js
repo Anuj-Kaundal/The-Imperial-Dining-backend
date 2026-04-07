@@ -13,7 +13,6 @@ app.use(cors({
   credentials: true
 }));
 
-app.options("*", cors());
 
 console.log(process.env.FRONTEND_URL);
 const PORT = process.env.PORT
