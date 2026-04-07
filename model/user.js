@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/cafe').then(() =>{
+mongoose.connect('mongodb+srv://kaundalanuj45_db_user:U32GSPTcSW2Ho5xR@cluster0.dqm4pyx.mongodb.net/cafe').then(() =>{
     console.log('database is connected')
 });
 const userdata = new mongoose.Schema({
