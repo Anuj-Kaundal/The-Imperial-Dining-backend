@@ -7,8 +7,14 @@ const nodemailer = require('nodemailer');
 const userdata = require('./model/user');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors({ origin: process.env.FRONTEND_URL }));
+const cors = require("cors");
 
+app.use(cors({
+  origin: "https://imperial-dining.vercel.app",
+  credentials: true
+}));
+
+app.options("*", cors());
 
 console.log(process.env.FRONTEND_URL);
 const PORT = process.env.PORT
