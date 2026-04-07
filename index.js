@@ -9,7 +9,7 @@ app.use(express.json());
 const cors = require("cors");
 
 app.use(cors({
-  origin: "https://the-imperial-dining-frontend.onrender.com/",
+  origin: "https://the-imperial-dining-frontend.onrender.com",
   credentials: true
 }));
 
