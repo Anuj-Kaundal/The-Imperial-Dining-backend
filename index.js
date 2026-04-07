@@ -10,7 +10,7 @@ app.use(express.json());
 const cors = require("cors");
 
 app.use(cors({
-  origin: "https://imperial-dining.vercel.app",
+  origin: "https://the-imperial-dining-frontend.onrender.com/",
   credentials: true
 }));
 
